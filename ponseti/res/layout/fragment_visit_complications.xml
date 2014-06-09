@@ -1,0 +1,160 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rlComplications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvComplications"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Were there any complications?" />
+
+            <RadioGroup
+                android:id="@+id/rgComplications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvComplications"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:text="No" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="Unspecified" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/llComplicationsDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgComplications"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/llDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        style="@style/questionBasics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Description of complication" />
+
+                    <EditText
+                        android:id="@+id/etDescription"
+                        style="@style/answerBasics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter text..." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTreatment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvTreatment"
+                        style="@style/questionBasics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Treatment of complication" />
+
+                    <EditText
+                        android:id="@+id/etTreatment"
+                        style="@style/answerBasics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter text..." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTreatmentResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvTreatmentResults"
+                        style="@style/questionBasics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Results after treatment" />
+
+                    <EditText
+                        android:id="@+id/etTreatmentResults"
+                        style="@style/answerBasics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/llTreatment"
+                        android:hint="Enter text..." />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlGeneralComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlComplications"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvGeneralComments"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="General Comments" />
+
+            <EditText
+                android:id="@+id/etGeneralComments"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvGeneralComments"
+                android:hint="Enter comments..." />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>
