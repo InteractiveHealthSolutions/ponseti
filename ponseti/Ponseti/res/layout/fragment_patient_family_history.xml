@@ -1,0 +1,351 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rlAnyRelativeWithClubFoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvAnyRelativeWithClubFoot"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Any Relatives with Club foot Deformity?" />
+
+            <RadioGroup
+                android:id="@+id/rgAnyRelativeWithClubFoot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/tvAnyRelativeWithClubFoot"
+                android:weightSum="4" >
+
+                <RadioButton
+                    android:id="@+id/rbAnyRelativeWithClubFoot_yes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="1"
+                    android:text="@string/yes" />
+                <RadioButton
+                    android:id="@+id/rbAnyRelativeWithClubFoot_no"
+                    android:layout_width="0dp"
+                    style="@style/answerBasics"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/no" />
+                <RadioButton
+                    android:id="@+id/rbAnyRelativeWithClubFoot_unspecified"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="2"
+                    android:text="@string/unspecified" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/llHowMany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgAnyRelativeWithClubFoot"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3" >
+
+                <TextView
+                    android:id="@+id/tvHowMany"
+                    style="@style/questionBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="How many" />
+
+                <EditText
+                    android:id="@+id/etHowMany"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/border"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLengthOfPregnancy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlAnyRelativeWithClubFoot"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvLengthOfPregnancy"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Length Of Pregnancy" />
+
+            <EditText
+                android:id="@+id/etLengthOfPregnancy"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLengthOfPregnancy"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDidMotherHadAnyComplicationAtPregnancy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlLengthOfPregnancy"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvDidMotherHadAnyComplicationAtPregnancy"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Did Mother have any complications at pregnancy?" />
+
+            <RadioGroup
+                android:id="@+id/rgDidMotherHadAnyComplicationAtPregnancy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/tvDidMotherHadAnyComplicationAtPregnancy"
+                android:weightSum="4" >
+
+                <RadioButton
+                    android:id="@+id/rbDidMotherHadAnyComplicationAtPregnancy_yes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="1"
+                    android:text="@string/yes" />
+                <RadioButton
+                    android:id="@+id/rbDidMotherHadAnyComplicationAtPregnancy_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="1"
+                    android:text="@string/no" />
+                <RadioButton
+                    android:id="@+id/rbDidMotherHadAnyComplicationAtPregnancy_unspecified"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="2"
+                    android:text="@string/unspecified" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/llWhatWereComplications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgDidMotherHadAnyComplicationAtPregnancy"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3" >
+
+                <TextView
+                    android:id="@+id/tvWhatWereComplications"
+                    style="@style/questionBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="How many" />
+
+                <EditText
+                    android:id="@+id/etWhatWereComplications"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/border"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDidMotherConsumeAlcoholDuringPregnancy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlDidMotherHadAnyComplicationAtPregnancy"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvDidMotherConsumeAlcoholDuringPregnancy"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Did mother consume alcohol during pregnancy" />
+
+            <RadioGroup
+                android:id="@+id/rgDidMotherConsumeAlcoholDuringPregnancy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/tvDidMotherConsumeAlcoholDuringPregnancy"
+                android:weightSum="4" >
+
+                <RadioButton
+                    android:id="@+id/rbDidMotherConsumeAlcoholDuringPregnancy_yes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="1"
+                    android:text="@string/yes" />
+                <RadioButton
+                    android:id="@+id/rbDidMotherConsumeAlcoholDuringPregnancy_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="1"
+                    android:text="@string/no" />
+                <RadioButton
+                    android:id="@+id/rbDidMotherConsumeAlcoholDuringPregnancy_unspecified"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="2"
+                    android:text="@string/unspecified" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDidMotherSmokeDuringPregnancy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlDidMotherConsumeAlcoholDuringPregnancy"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvDidMotherSmokeDuringPregnancy"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Did mother smoke during pregnancy?" />
+
+            <RadioGroup
+                android:id="@+id/rgDidMotherSmokeDuringPregnancy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/tvDidMotherSmokeDuringPregnancy"
+                android:weightSum="4" >
+
+                <RadioButton
+                    android:id="@+id/rbDidMotherSmokeDuringPregnancy_yes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="1"
+                    android:text="@string/yes" />
+                <RadioButton
+                    android:id="@+id/rbDidMotherSmokeDuringPregnancy_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="1"
+                    android:text="@string/no" />
+                <RadioButton
+                    android:id="@+id/rbDidMotherSmokeDuringPregnancy_unspecified"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="2"
+                    android:text="@string/unspecified" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBirthComplications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlDidMotherSmokeDuringPregnancy"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvBirthComplications"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Any complications during birth?" />
+
+            <RadioGroup
+                android:id="@+id/rgBirthComplications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/tvBirthComplications"
+                android:weightSum="4" >
+
+                <RadioButton
+                    android:id="@+id/rbBirthComplications_yes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="1"
+                    android:text="@string/yes" />
+                <RadioButton
+                    android:id="@+id/rbBirthComplications_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="1"
+                    android:text="@string/no" />
+                <RadioButton
+                    android:id="@+id/rbBirthComplications_unspecified"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/answerBasics"
+                    android:layout_weight="2"
+                    android:text="@string/unspecified" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBirthPlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlBirthComplications"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvBirthPlace"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Birth place" />
+
+            <Spinner
+                android:id="@+id/spBirthPlace"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBirthPlace"
+                android:entries="@array/place_of_birth" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Drop Shadow Stack -->
+    <item android:drawable="@drawable/shadow_right_1">
+    </item>
+    <item android:drawable="@drawable/shadow_right_2">
+    </item>
+    <item android:drawable="@drawable/shadow_right_3">
+    </item>
+    <item android:drawable="@drawable/shadow_right_4">
+    </item>
+    <item android:drawable="@drawable/shadow_right_5">
+    </item>
+
+    <!-- Background -->
+    <item>
+        <shape>
+            <solid android:color="@color/aqua_DCF0FF" />
+
+            <corners android:radius="0dp" />
+        </shape>
+    </item>
+
+</layer-list>

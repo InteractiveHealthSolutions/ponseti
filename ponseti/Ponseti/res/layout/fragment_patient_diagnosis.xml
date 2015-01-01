@@ -1,0 +1,438 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rlNameOfEvaluator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvNameOfEvaluator"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name of evaluator" />
+
+            <Spinner
+                android:id="@+id/spNameOfEvaluator"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvNameOfEvaluator" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlEvaluationDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlNameOfEvaluator"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvEvaluationDate"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Evaluation date" />
+
+            <EditText
+                android:id="@+id/etEvaluationDate"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEvaluationDate"
+                android:hint="Touch to select date" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlFeetAffected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlEvaluationDate"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvFeetAffected"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feet affected" />
+
+            <Spinner
+                android:id="@+id/spFeetAffected"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvFeetAffected"
+                android:entries="@array/left_right_both" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDiagnosis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlFeetAffected"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvDiagnosis"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diagnosis" />
+
+            <Spinner
+                android:id="@+id/spDiagnosis"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDiagnosis"
+                android:entries="@array/diagnosis" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDeformityPresentAtBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlDiagnosis"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvDeformityPresentAtBirth"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deformity present at birth?" />
+
+            <RadioGroup
+                android:id="@+id/rgDeformityPresentAtBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDeformityPresentAtBirth"
+                android:orientation="horizontal"
+                android:weightSum="4" >
+
+                <RadioButton
+                    android:id="@+id/rbDeformityPresentAtBirth_yes"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/rbDeformityPresentAtBirth_no"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/no" />
+
+                <RadioButton
+                    android:id="@+id/rbDeformityPresentAtBirth_unspecified"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/unspecified" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAnyPreviousTreatment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlDeformityPresentAtBirth"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvAnyPreviousTreatment"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Any previous treatment" />
+
+            <RadioGroup
+                android:id="@+id/rgAnyPreviousTreatment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAnyPreviousTreatment"
+                android:orientation="horizontal"
+                android:weightSum="4" >
+
+                <RadioButton
+                    android:id="@+id/rbAnyPreviousTreatment_yes"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/rbAnyPreviousTreatment_no"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/no" />
+
+                <RadioButton
+                    android:id="@+id/rbAnyPreviousTreatment_unspecified"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/unspecified" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/llNumberOfPreviousTreatments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgAnyPreviousTreatment"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3" >
+
+                <TextView
+                    android:id="@+id/tvNumberOfPreviousTreatments"
+                    style="@style/questionBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="How many" />
+
+                <EditText
+                    android:id="@+id/etNumberOfPreviousTreatments"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/border"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTypeOfPreviousTreatment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llNumberOfPreviousTreatments"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvTypeOfPreviousTreatment"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TypeOfPreviousTreatment" />
+
+                <CheckBox
+                    android:id="@+id/cbCastingAboveKnee"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Casting above knee" />
+
+                <CheckBox
+                    android:id="@+id/cbCastingBelowKnee"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Casting below knee" />
+
+                <CheckBox
+                    android:id="@+id/cbPhysiotherapy"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Physiotherapy" />
+
+                <CheckBox
+                    android:id="@+id/cbUnspecified"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Unspecified" />
+
+                <CheckBox
+                    android:id="@+id/cbOther"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Other" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDiagnosedPrenatally"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlAnyPreviousTreatment"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvDiagnosedPrenatally"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diagnosed prenatally" />
+
+            <RadioGroup
+                android:id="@+id/rgDiagnosedPrenatally"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDiagnosedPrenatally"
+                android:orientation="horizontal"
+                android:weightSum="4" >
+
+                <RadioButton
+                    android:id="@+id/rbDiagnosedPrenatally_yes"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/rbDiagnosedPrenatally_no"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/no" />
+
+                <RadioButton
+                    android:id="@+id/rbDiagnosedPrenatally_unspecified"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/unspecified" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/llAtPregnancyWeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgDiagnosedPrenatally"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="3" >
+
+                <TextView
+                    android:id="@+id/tvAtPregnancyWeek"
+                    style="@style/questionBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="At pregnancy week" />
+
+                <EditText
+                    android:id="@+id/etAtPregnancyWeek"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/border"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llConfirmedAtBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llAtPregnancyWeek"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvConfirmedAtBirth"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirmed at birth" />
+
+                <RadioGroup
+                    android:id="@+id/rgConfirmedAtBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4" >
+
+                    <RadioButton
+                        android:id="@+id/rbConfirmedAtBirth_yes"
+                        style="@style/answerBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/yes" />
+
+                    <RadioButton
+                        android:id="@+id/rbConfirmedAtBirth_no"
+                        style="@style/answerBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/no" />
+
+                    <RadioButton
+                        android:id="@+id/rbConfirmedAtBirth_unspecified"
+                        style="@style/answerBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/unspecified" />
+                </RadioGroup>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDagnisisComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/rlDiagnosedPrenatally"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvDagnisisComments"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diagnosis comments" />
+
+            <EditText
+                android:id="@+id/etDiagnisisComments"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDagnisisComments"
+                android:hint="Enter text..." >                
+            </EditText>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

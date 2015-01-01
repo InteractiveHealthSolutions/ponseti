@@ -1,0 +1,335 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rlHospital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvHospital"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hospital/ Clinic" />
+
+            <Spinner
+                android:id="@+id/spHospital"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHospital" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/rlHospital"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvSurName"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last Name/ Surname" />
+
+            <EditText
+                android:id="@+id/etSurName"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSurName"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlFirstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlSurname"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvFirstName"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Name" />
+
+            <EditText
+                android:id="@+id/etFirstName"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvFirstName"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMiddleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlFirstname"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvMiddleName"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Middle Name" />
+
+            <EditText
+                android:id="@+id/etMiddleName"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvMiddleName"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlMiddleName"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvSex"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sex" />
+
+            <RadioGroup
+                android:id="@+id/rgSex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSex"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/female" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlSex"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvRace"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Race" />
+
+            <EditText
+                android:id="@+id/etRace"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvRace"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDateOfBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlRace"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvDateOfBirth"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date of birth" />
+
+            <EditText
+                android:id="@+id/etDateOfBirth"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDateOfBirth"
+                android:hint="Touch to select date" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlDateOfBirth"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvTribe"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tribe" />
+
+            <EditText
+                android:id="@+id/etTribe"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTribe"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlTribe"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvAddress1"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address 1" />
+
+            <EditText
+                android:id="@+id/etAddress1"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAddress1"
+                android:hint="Enter text..." />
+
+            <TextView
+                android:id="@+id/tvAddress2"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etAddress1"
+                android:text="Address 2" />
+
+            <EditText
+                android:id="@+id/etAddress2"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAddress2"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlVillageTownCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlAddress"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvVillageTownCity"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Village/ Town/ City" />
+
+            <EditText
+                android:id="@+id/etVillageTownCity"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvVillageTownCity"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlStateProvince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlVillageTownCity"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvStateProvince"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="State/ Province" />
+
+            <EditText
+                android:id="@+id/etStateProvince"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvStateProvince"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlStateProvince"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvCountry"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Country" />
+
+            <EditText
+                android:id="@+id/etCountry"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCountry"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

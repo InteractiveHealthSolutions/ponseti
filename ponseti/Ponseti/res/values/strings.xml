@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ponseti</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_exit">Exit</string>
+    <string name="action_upload_forms">Forms</string>
+    <string name="action_upload_photos">Photos</string>
+    <string name="action_export_patient_forms">Patient Forms</string>
+    <string name="action_export_visit_forms">Visit Forms</string>
+    <string name="action_export_evaluator_forms">Evaluator Forms</string>
+    <string name="upload">Upload</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_splash">Ponseti</string>
+    <string name="title_activity_home">Home</string>
+    <string name="splsah_screen">Splash SCreen</string>
+
+    <color name="blue_33B5E5">#33B5E5</color>
+    <color name="red_f00000">#f00000</color>
+    <color name="blue_ics_light_67D6FF">#67D6FF</color>
+    <color name="gray_e7e7e7">#e7e7e7</color>
+    <color name="gray_light_dbdbdb">#dbdbdb</color>
+    <color name="yellow_light_FFFFDF">#FFFFDF</color>
+    <color name="yellow_light_F9F9CE">#F9F9CE</color>
+    <color name="aqua_darker_B1D7F8">#B1D7F8</color>
+    <color name="aqua_dark_D0E7FA">#D0E7FA</color>
+    <color name="aqua_DCF0FF">#DCF0FF</color>
+
+    <string name="btn_submit">Submit</string>
+    <string name="title_activity_date_selector">Select Date</string>
+    <string name="forgot_password"><u><i>Forgot Password?</i></u></string>
+    <string name="apply_for_account"><u>Apply for an account?</u></string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="unspecified">Unspecified</string>
+    <string name="father">Father</string>
+    <string name="mother">Mother</string>
+    <string name="brother">Brother</string>
+    <string name="other">Other</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="title_activity_reporting_web_view">ReportingWebView</string>
+    <string name="title_activity_view_patients">View Patients</string>
+    <string name="title_activity_add_patient">Add Patient</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_add_patinet">Add Patinet</string>
+    <string name="title_activity_create_evaluator">CreateEvaluator</string>
+    <string name="title_activity_view_evaluators">View Evaluators</string>
+    <string name="synch_data">Synch data</string>
+    <string name="export_data">Export</string>
+    <string name="get_latest_forms">Get Latest Forms</string>
+    <string name="title_activity_add_visit">Add Visit</string>
+    <string name="title_activity_patient_permissions_dialog">Permissions</string>
+    <string name="title_activity_export">Export Data</string>
+    <string name="title_activity_view_visits">View Visits</string>
+    <string name="title_activity_image_capturer">Capture Image</string>
+    <string name="title_activity_view_photos">ViewPhotos</string>
+    <string name="title_activity_photo_viewer">Photo Viewer</string>
+
+</resources>

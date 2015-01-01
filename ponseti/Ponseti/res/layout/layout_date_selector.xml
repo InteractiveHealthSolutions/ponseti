@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_0071c5"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Set date and press submit button"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:context=".DateSelector" />
+    -->
+
+
+    <!--
+         <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:text=" Select Date"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold|italic" />
+    -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/gray_e7e7e7" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:id="@+id/llDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvTimePickerHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:text=" Select Time"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:id="@+id/vTimePickerUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/gray_e7e7e7" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/btn_submit" />
+
+</LinearLayout>

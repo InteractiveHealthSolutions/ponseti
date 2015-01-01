@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="title_of_evaluator">
+        <item></item>
+        <item>Nurse</item>
+        <item>Midwife</item>
+        <item>Physical Therapist</item>
+        <item>Officer</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="emergency_contact">
+        <item></item>
+        <item>Primary</item>
+        <item>Secondary</item>
+        <item>Other</item>
+        <item>Unspecified</item>
+    </string-array>
+    <string-array name="brace_compilance">
+        <item></item>
+        <item>Unspecified</item>
+        <item>Good</item>
+        <item>Fair</item>
+        <item>Poor</item>
+        <item>None</item>
+    </string-array>
+    <string-array name="treatments">
+        <item></item>
+        <item>None</item>
+        <item>C - manipulation &amp; Casting</item>
+        <item>T - Tenotomy</item>
+        <item>B - Brace application</item>
+        <item>R - Refer</item>
+        <item>S - Surgery</item>
+        <item>O - Other</item>
+    </string-array>
+    <string-array name="yes_no_unspecified">
+        <item></item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Unspecified</item>
+    </string-array>
+    <string-array name="diagnosis">
+        <item></item>
+        <item>Idiopathic clubfoot</item>
+        <item>Syndromic clubfoot</item>
+        <item>Neuropathic clubfoot</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="left_right_both">
+        <item></item>
+        <item>Left</item>
+        <item>Right</item>
+        <item>Both</item>
+    </string-array>
+    <string-array name="referal_source">
+        <item></item>
+        <item>Hospital/ clinic</item>
+        <item>Midwife</item>
+        <item>Word of mouth</item>
+        <item>Promotional materials</item>
+        <item>Other</item>
+        <item>Unspecified</item>
+    </string-array>
+    <string-array name="relations">
+        <item></item>
+        <item>Mother</item>
+        <item>Father</item>
+        <item>Grandparent</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Aunt</item>
+        <item>Uncle</item>
+        <item>Friend</item>
+        <item>Other</item>
+        <item>Unspecified</item>
+    </string-array>
+    <string-array name="varus">
+        <item></item>
+        <item>Varus</item>
+        <item>Neutral</item>
+        <item>Valgus</item>
+        <item>Not assessed</item>
+    </string-array>
+    <string-array name="cavus">
+        <item></item>
+        <item>Present</item>
+        <item>Corrected</item>
+        <item>Not assessed</item>
+        <item>Unspecified</item>
+    </string-array>
+    <string-array name="place_of_birth">
+        <item></item>
+        <item>Hospital</item>
+        <item>Clinic</item>
+        <item>Home</item>
+        <item>Unspecified</item>
+    </string-array>
+    <string-array name="report_type">
+        <item></item>
+        <item>Visit Form</item>
+        <item>Patient Form</item>
+        <item>Evaluator Form</item>
+    </string-array>
+
+</resources>

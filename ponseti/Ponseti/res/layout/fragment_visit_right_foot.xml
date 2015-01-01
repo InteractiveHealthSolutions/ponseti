@@ -1,0 +1,800 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rlVarus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvVarus"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Varus" />
+
+            <Spinner
+                android:id="@+id/spVarus"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvVarus"
+                android:entries="@array/varus" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCavus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlVarus"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvCavus"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cavus" />
+
+            <Spinner
+                android:id="@+id/spCavus"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCavus"
+                android:entries="@array/cavus" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAbductus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlCavus"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvAbductus"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Abductus" />
+
+            <EditText
+                android:id="@+id/etAbductus"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAbductus"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlEnquinus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlAbductus"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvEnquinus"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enquinus" />
+
+            <EditText
+                android:id="@+id/etEnquinus"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEnquinus"
+                android:hint="Enter text..." />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvHeadingPiraniScores"
+            style="@style/headingBasics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlEnquinus"
+            android:background="@drawable/border_filled"
+            android:text="Pirani Scores (Hindfoot) " />
+
+        <RelativeLayout
+            android:id="@+id/rlPosteriorCrease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHeadingPiraniScores"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvPosteriorCrease"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Posterior crease" />
+
+            <RadioGroup
+                android:id="@+id/rgPosteriorCrease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPosteriorCrease"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.5" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlEmptyHeel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlPosteriorCrease"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvEmptyHeel"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Empty heel" />
+
+            <RadioGroup
+                android:id="@+id/rgEmptyHeel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEmptyHeel"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.5" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRigidEnquinus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlEmptyHeel"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvRigidEnquinus"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rigid enquinus" />
+
+            <RadioGroup
+                android:id="@+id/rgRigidEnquinus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvRigidEnquinus"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.5" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvHeadingPiraniScoresMidfoot"
+            style="@style/headingBasics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlRigidEnquinus"
+            android:background="@drawable/border_filled"
+            android:text="Pirani Scores (Midfoot)" />
+
+        <RelativeLayout
+            android:id="@+id/rlMedialCrease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHeadingPiraniScoresMidfoot"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvMedialCrease"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medial crease" />
+
+            <RadioGroup
+                android:id="@+id/rgMedialCrease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvMedialCrease"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.5" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTalarHeadCoverage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlMedialCrease"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvTalarHeadCoverage"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Talar head coverage" />
+
+            <RadioGroup
+                android:id="@+id/rgTalarHeadCoverage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTalarHeadCoverage"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.5" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCurvedLateralBorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlTalarHeadCoverage"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvCurvedLateralBorder"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Curved lateral border" />
+
+            <RadioGroup
+                android:id="@+id/rgCurvedLateralBorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCurvedLateralBorder"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.5" />
+
+                <RadioButton
+                    style="@style/answerBasics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTreatments"
+            style="@style/headingBasics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlCurvedLateralBorder"
+            android:background="@drawable/border_filled"
+            android:text="Treatment" />
+
+        <RelativeLayout
+            android:id="@+id/rlTreatment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTreatments"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border" >
+
+            <TextView
+                android:id="@+id/tvTreatment"
+                style="@style/questionBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Treatment" />
+
+            <Spinner
+                android:id="@+id/spTreatment"
+                style="@style/answerBasics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTreatment"
+                android:entries="@array/treatments" />
+
+            <LinearLayout
+                android:id="@+id/llCaster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spTreatment"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvCaster"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Caster" />
+
+                <EditText
+                    android:id="@+id/etCaster"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCastNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llCaster"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvCastNumber"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cast number" />
+
+                <EditText
+                    android:id="@+id/etCastNumber"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDegreesAbduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llCastNumber"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvDegreesAbduction"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Degrees abduction" />
+
+                <EditText
+                    android:id="@+id/etDegreesAbduction"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDegreesDorsiflexion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llDegreesAbduction"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvDegreesDorsiflexion"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Degrees dorsiflexion" />
+
+                <EditText
+                    android:id="@+id/etDegreesDorsiflexion"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBraceCompliance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llDegreesDorsiflexion"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvBraceCompliance"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Brace compliance" />
+
+                <Spinner
+                    android:id="@+id/spBraceCompliance"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/brace_compilance" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llProblems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llBraceCompliance"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvProblems"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Problems" />
+
+                <EditText
+                    android:id="@+id/etProblems"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llActionTaken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llProblems"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvActionTaken"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ActionTaken" />
+
+                <EditText
+                    android:id="@+id/etActionTaken"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSurgeryType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llActionTaken"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <CheckBox
+                        android:id="@+id/cbPosterialRelease"
+                        style="@style/questionBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:text="Posterial release" />
+
+                    <CheckBox
+                        android:id="@+id/cbMedialRelease"
+                        style="@style/questionBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:text="MedialRelease" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <CheckBox
+                        android:id="@+id/cbSubatalarRelease"
+                        style="@style/questionBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:text="Subatalar release" />
+
+                    <CheckBox
+                        android:id="@+id/cbPlantarRelease"
+                        style="@style/questionBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:text="Plantar release" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <CheckBox
+                        android:id="@+id/cbAchillesLengthening"
+                        style="@style/questionBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:text="Achilles lengthening" />
+
+                    <CheckBox
+                        android:id="@+id/cbTendonTransfers"
+                        style="@style/questionBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:text="Tendon transfers" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <CheckBox
+                        android:id="@+id/cbOsteotomies"
+                        style="@style/questionBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:text="Osteotomies" />
+
+                    <CheckBox
+                        android:id="@+id/cbArthrodesis"
+                        style="@style/questionBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:text="Arthrodesis" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <CheckBox
+                        android:id="@+id/cbTalectomy"
+                        style="@style/questionBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:text="Talectomy" />
+                    <CheckBox
+                        android:id="@+id/cbOther"
+                        style="@style/questionBasics"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:text="Other" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llOtherSurgeryType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llSurgeryType"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvOtherSurgeryType"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Other Surgery Type" />
+
+                <EditText
+                    android:id="@+id/etOtherSurgeryType"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter surgery type..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSurgeryComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llOtherSurgeryType"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvSurgeryComments"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Surgery Comments" />
+
+                <EditText
+                    android:id="@+id/etSurgeryComments"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Give comments..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llGiveDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llActionTaken"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvGiveDetails"
+                    style="@style/questionBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Give details" />
+
+                <EditText
+                    android:id="@+id/etGiveDetails"
+                    style="@style/answerBasics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter text..." />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

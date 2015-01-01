@@ -1,0 +1,225 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_activity_header"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="20dp" >
+
+            <TextView
+                android:id="@+id/btnDownload"
+                style="@style/headerButtons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/state_list_orange_shadow_bottom"
+                android:text="Synch from server" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                tools:context=".DownloadFile" >
+
+                <TextView
+                    android:id="@+id/btnUpload"
+                    style="@style/headerButtons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/state_list_light_green_shadow_bottom"
+                    android:text="Synch to server" />
+
+                <TextView
+                    android:id="@+id/tvBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/btnUpload"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="top|left"
+                    android:padding="2dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btnExport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/menu_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llInformationBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drop_shadow"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/pbInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:maxHeight="30dp"
+                android:minHeight="20dp"
+                android:progressDrawable="@android:drawable/progress_horizontal" />
+
+            <TextView
+                android:id="@+id/tvInformation"
+                style="@style/informationBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uploading Photos..."
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/btnAddPatient"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/state_list_orange_shadow_bottom"
+                        android:drawableTop="@drawable/create_patient"
+                        android:drawablePadding="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Create Patient"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/btnViewPatients"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:drawablePadding="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/state_list_yellow_shadow_bottom"
+                        android:drawableTop="@drawable/view_patients"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="20dp"
+                        android:text="View Patients"
+                        android:textSize="24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/btnAddEvaluator"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:drawablePadding="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/state_list_light_green_shadow_bottom"
+                        android:drawableTop="@drawable/create_evaluator"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Create Evaluator"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/btnViewEvaluators"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/state_list_blue_shadow_bottom"
+                        android:drawableTop="@drawable/view_evaluators"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="20dp"
+                        android:text="View Evaluators"
+                        android:textSize="24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/btnTrainingVideos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:drawablePadding="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/state_list_light_purple_shadow_bottom"
+                        android:drawableTop="@drawable/view_images"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="20dp"
+                        android:text="View Images"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/btnMyAccount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/state_list_light_gray_shadow_bottom"
+                        android:drawableTop="@drawable/view_visits"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="20dp"
+                        android:text="View Visits"
+                        android:textSize="24dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
